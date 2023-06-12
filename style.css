@@ -1,75 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 img,
-svg{
+svg {
     display: block;
     max-width: 100%;
 }
 
-.container{
-    padding: 2rem
+.container {
+    padding: 1.5em
 }
-body{
+
+body {
     font-family: 'Open Sans',
-    sans-serif;
+        sans-serif;
     /* font-family: 'Poppins',
     sans-serif; */
     font-weight: 400;
     background-image: url(images/bg-mobile.svg);
     background-repeat: no-repeat;
-    background-color:hsl(257, 40%, 49%);
+    background-color: hsl(257, 40%, 49%);
     background-size: contain;
     color: hsl(300, 100%, 100%);
 }
 
-.section-1{
-    display: flex;
-    flex-direction: column;
-}
 
-.logo{
+.logo {
     width: 8rem;
 }
 
-.main-image{
+.main-image {
     width: 80vw;
     padding-top: 3.9rem;
     margin: 0 auto;
 }
 
-.section-2{
+.section-2 {
     text-align: center;
 }
 
-.title{
+.title {
     color: hsl(300, 100%, 100%);
     font-size: 1.4rem;
     font-family: 'Poppins',
-    sans-serif;
+        sans-serif;
     font-weight: 600;
     padding: 4rem 5px 0px 5px;
 }
 
-.text{
+.text {
     padding: 1rem 3px 1rem 3px;
     line-height: 1.5rem;
+    color: hsl(300, 100%, 100%, .7);
 }
 
-.button{
+.button {
     margin-top: .7rem;
     padding: .8rem 4.7rem;
     font-size: .8rem;
-    color:hsl(257, 40%, 49%);
+    color: hsl(257, 40%, 49%);
     border-radius: 50px;
 }
 
-.social-media{
+.social-media {
     font-size: 13px;
     display: flex;
     justify-content: center;
@@ -77,7 +75,7 @@ body{
     padding: 2.2rem;
 }
 
-.icon-container{
+.icon-container {
     position: relative;
     width: 1.8rem;
     height: 1.8rem;
@@ -85,24 +83,78 @@ body{
     border: 1px solid hsl(300, 100%, 100%);
 }
 
-.icons{
+.icons {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-@min
+@media only screen and (min-width:600px) {
+    body {
+        background-image: url(images/bg-desktop.svg);
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .container {
+        padding: 2em;
+    }
+
+    .sections {
+        display: flex;
+        align-items: center;
+    }
+
+    .section-1 {
+        flex: 1 1 0;
+
+    }
+
+    .section-2 {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        padding: 0 3em;
+        flex: 1 1 0;
 
 
+    }
 
+    .main-image {
+        padding-top: 0;
+    }
+
+    .button {
+        width: 11em;
+        padding: 1em 2em;
+    }
+
+    .button:hover {
+        background-color: hsl(300, 69%, 71%);
+        color: white;
+        cursor: pointer;
+    }
+
+    .social-media {
+        justify-content: end;
+        padding: 3rem 0;
+    }
+
+    .icon-container:hover {
+        color: hsl(300, 69%, 71%);
+        cursor: pointer;
+        border: 1px solid hsl(300, 69%, 71%);
+    }
+}
 
 
 .attribution {
     font-size: 11px;
-    text-align: center;
+    text-align: end;
+    color: white;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: white;
 }
